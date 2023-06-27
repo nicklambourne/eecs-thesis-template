@@ -1,0 +1,9 @@
+load("@rules_python//python:python.bzl", "py_binary")
+
+
+py_binary(
+    name = "insert_sha",
+    srcs = ["src/main.py"],
+    main = "src/main.py",
+    visibility = ["//visibility:public"],
+)

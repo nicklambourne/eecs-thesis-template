@@ -1,0 +1,53 @@
+%-----------------------
+% `thesis/main.tex' is the document root
+%-----------------------
+\documentclass[12pt,a4paper,oneside]{book}
+
+%-----------------------
+% Setup
+%-----------------------
+\input{common/tex/globals}
+\input{common/tex/packages}
+\input{common/tex/setup}
+\input{common/tex/commands}
+
+% Relative (from WORKSPACE root) path to biber-style reference list
+\addbibresource{common/references/references.bib}
+
+% Relative (from WORKSPACE root) path to where images are stored
+\graphicspath{ {resources/img} }
+
+% Set document metadata
+\hypersetup{ 	
+    pdfsubject = {\titletext},
+    pdftitle = {\titletext},
+    pdfauthor = {\authortext}
+}
+
+%-----------------------
+% Document contents
+%-----------------------
+\begin{document}
+
+    % Front matter
+    \input{thesis/sections/00_front_matter/00_cover}
+    \input{thesis/sections/00_front_matter/01_letter}
+    \input{thesis/sections/00_front_matter/02_acknowledgements}
+    \input{thesis/sections/00_front_matter/03_abstract}
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    % Body
+    \input{thesis/sections/01_body/00_introduction}
+    \input{thesis/sections/01_body/01_background}
+    \input{thesis/sections/01_body/02_implementation}
+    \input{thesis/sections/01_body/03_results}
+    \input{thesis/sections/01_body/04_discussion}
+    \input{thesis/sections/01_body/05_conclusion}
+
+    % Rear matter
+    \printbibliography[heading=bibintoc,heading=bibnumbered]
+    \input{thesis/sections/02_rear_matter/00_appendix}
+
+\end{document}

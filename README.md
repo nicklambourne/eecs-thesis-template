@@ -1,2 +1,2 @@
-# itee-thesis-template
-UQ ITEE Thesis Template
+# Practical Limitations of Simple Quantum Autonoma
+Thesis, pt II

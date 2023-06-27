@@ -1,0 +1,84 @@
+load("@pypi//:requirements.bzl", "requirement")
+load("@bazel_latex//:latex.bzl", "latex_document")
+
+PY_DEPS = [
+    requirement("loguru"),
+    requirement("mypy"),
+    requirement("pytest"),
+]
+
+
+py_binary(
+    name = "main",
+    srcs = glob(["src/**/*.py"]),
+    deps = PY_DEPS,
+)
+
+
+TEX_DEPS = [
+    "@bazel_latex//packages:amsmath",
+    "@bazel_latex//packages:babel_english",
+    "@bazel_latex//packages:biblatex",
+    "@bazel_latex//packages:calc",
+    "@bazel_latex//packages:csquotes",
+    "@bazel_latex//packages:enumitem",
+    "@bazel_latex//packages:float",
+    "@bazel_latex//packages:geometry",
+    "@bazel_latex//packages:grfext",
+    "@bazel_latex//packages:hyperref",
+    "@bazel_latex//packages:l3keys2e",
+    "@bazel_latex//packages:listings",
+    "@bazel_latex//packages:longtable",
+    "@bazel_latex//packages:tikz",
+    "@bazel_latex//packages:titling",
+    "@bazel_latex//packages:upquote",
+    "@bazel_latex//packages:xcolor",
+    "@bazel_latex//packages:xkeyval",
+    "@texlive_texmf__texmf-dist__tex__generic__hyph-utf8__loadhyph",  #lipsum
+    "@texlive_texmf__texmf-dist__tex__generic__hyph-utf8__patterns__tex",  #lipsum
+    "@texlive_texmf__texmf-dist__tex__latex__appendix",
+    "@texlive_texmf__texmf-dist__tex__latex__biblatex-ieee",
+    "@texlive_texmf__texmf-dist__tex__latex__braket",
+    "@texlive_texmf__texmf-dist__tex__latex__inconsolata",  # zi4 font
+    "@texlive_texmf__texmf-dist__tex__latex__lipsum",
+    "@texlive_texmf__texmf-dist__tex__latex__lstaddons",  # lstautogobble
+    "@texlive_texmf__texmf-dist__tex__latex__mathtools",
+    "@texlive_texmf__texmf-dist__tex__latex__multirow",
+    "@texlive_texmf__texmf-dist__tex__latex__pdflscape",
+    "@texlive_texmf__texmf-dist__tex__latex__tocbibind",
+    "@texlive_texmf__texmf-dist__tex__latex__todonotes",
+]
+
+
+latex_document(
+    name = "proposal",
+    srcs = glob(
+        [
+            "proposal/**/*.tex", 
+            "common/**/*.tex", 
+            "common/**/*.png",
+            "common/**/*.jpeg",
+            "common/**/*.bib",
+        ], 
+    ) + TEX_DEPS,
+    format = "pdf",
+    cmd_flags = ["--bibtex-cmd=biber"],
+    main = "proposal/main.tex",
+)
+
+
+latex_document(
+    name = "thesis",
+    srcs = glob(
+        [
+            "thesis/**/*.tex", 
+            "common/**/*.tex", 
+            "common/**/*.png",
+            "common/**/*.jpeg",
+            "common/**/*.bib",
+        ], 
+    ) + TEX_DEPS,
+    format = "pdf",
+    cmd_flags = ["--bibtex-cmd=biber"],
+    main = "thesis/main.tex",
+)

@@ -1,0 +1,29 @@
+name: Publish Proposal as PDF
+on:
+  push:
+    branches:
+        - "master"
+    paths:
+        - 'common/**'
+        - 'proposal/**'
+jobs:
+  build:
+    name: "Build Proposal PDF"
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Build Target
+        id: build
+        run: |
+            bazel build //:proposal
+            echo "artifact_name=proposal-${GITHUB_SHA::7}.pdf" >> $GITHUB_OUTPUT
+            file="$(bazel info execution_root)/$(bazel cquery --output=files //:proposal 2> /dev/null)"
+            sha_file="/tmp/$(bazel run //tools/build/ci/insert_sha -- ${file} ${GITHUB_SHA} 2> /dev/null)"
+            cp "$file" "$sha_file"
+            echo "artifact_path=${sha_file}" >> $GITHUB_OUTPUT
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+            name: ${{ steps.build.outputs.artifact_name }}
+            path: ${{ steps.build.outputs.artifact_path }}
