@@ -1,2 +1,2 @@
-# Practical Limitations of Simple Quantum Autonoma
-Thesis, pt II
+# (Unofficial UQ ITEE Undergraduate Thesis Template)
+
