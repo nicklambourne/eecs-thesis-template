@@ -184,7 +184,7 @@ and
 are supported natively, other languages are supported via rule sets 
 (plugins), most of which are community-maintained (and of varying 
 levels of quality). See a full list 
-(here)[https://github.com/jin/awesome-bazel].
+[here](https://github.com/jin/awesome-bazel).
 
 I can't promise I'll have the time to help you set up other 
 languages, but I'll provide what support I can.
