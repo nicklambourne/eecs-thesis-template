@@ -4,8 +4,8 @@
 
 Having been forced to write not one but two undergraduate theses
 at UQ as part of studying software engineering and then transferring 
-into computer science I figured I'd take what I learnt the first 
-time around and share it with my peers. This takes a lot of the 
+into computer science, I figured I'd take what I learnt the first 
+time around and share it with my peers. This also takes a lot of the 
 lessons I've learnt in ~3 years of working in industry and applies them to an academic context. I'm hoping it can serve as an 
 introduction to some interesting tooling for inquisitive students 
 approaching the end of their undergraduate studies.
@@ -50,6 +50,11 @@ direnv allow # This will trigger the Nix environment (sadly not
 # pure)
 bazel sync # This downloads the requisite Bazel tooling
 ```
+
+Once the toolchains are set up, the first thing you'll want to do 
+is head to `common/tex/globals.tex` and fill in your name, student 
+number, supervisor etc. These values will then be used to populate 
+both documents.
 
 ## Building Docs Locally
 To build the proposal document, run the following Bazel command:
@@ -132,7 +137,7 @@ not impossible. The `bazel-latex` have created a modular copy of
 TeXLive, the most common (and very comprehensive) TeX distribution.
 
 Unfortunately, this distribution doesn't come with a manifest, so 
-while you can fetch individual packages you have to go digging to 
+while you can fetch individual packages you may have to go digging to 
 find them.
 
 You'll want to pull the TeXLive tarball (~3.4GB):
