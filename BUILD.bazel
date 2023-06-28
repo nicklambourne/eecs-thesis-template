@@ -39,7 +39,6 @@ TEX_DEPS = [
     "@texlive_texmf__texmf-dist__tex__latex__appendix",
     "@texlive_texmf__texmf-dist__tex__latex__biblatex-ieee",
     "@texlive_texmf__texmf-dist__tex__latex__braket",
-    "@texlive_texmf__texmf-dist__tex__latex__inconsolata",  # zi4 font
     "@texlive_texmf__texmf-dist__tex__latex__lipsum",
     "@texlive_texmf__texmf-dist__tex__latex__lstaddons",  # lstautogobble
     "@texlive_texmf__texmf-dist__tex__latex__mathtools",
