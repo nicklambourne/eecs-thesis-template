@@ -192,6 +192,13 @@ languages, but I'll provide what support I can.
 If you do get another language toolchain working, please send 
 through a PR so others can benefit as well.
 
+### Uh, ackchyually...?
+Have I missed something? (almost certainly) Made an error? (probably) 
+Or perhaps you have a suggestion for how the template could be 
+improved? All PRs and suggestions are welcome! Filing an issue is 
+almost as welcome, but I will try to address issues promptly when 
+they come up.
+
 ## Shout Outs
 - Prodrive Technologies B.V., authors of 
 [`bazel-latex`](https://github.com/ProdriveTechnologies/bazel-latex).
