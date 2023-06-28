@@ -1,4 +1,4 @@
-name: Publish Thesis v2 as PDF
+name: Publish Thesis as PDF
 on:
   push:
     branches:
