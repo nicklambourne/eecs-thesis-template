@@ -174,7 +174,7 @@ which bundles.
 Of course, TeXLive (and others) come out of the box with Overleaf 
 so you can always say "to hell with this" and just use their web 
 editor (of course this will break the GitHub Actions, but you can 
-always export the PDF from overleaf :shrug:).
+always export the PDF from Overleaf :shrug:).
 
 ### I'm Not Using Python For My Thesis, How Do?
 [Java](https://bazel.build/versions/6.1.0/reference/be/java?hl=en) 
