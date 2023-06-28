@@ -13,12 +13,13 @@ approaching the end of their undergraduate studies.
 The 
 [semi-official template](http://itee.uq.edu.au/files/20609/itee-thesis-template_tex.txt)
  is also a mess of barely relevant custom macros. 
- Where possible I've drawn from marking / criteria sheets and official literature, but this is not an ITEE provided or sponsored
- document, use at your own discretion.
+ Where possible I've drawn from marking / criteria sheets and 
+ official literature to provide (limited) guidance as to what's 
+ expected for each section, but this is not a UQ/ITEE-provided or sponsored document, use at your own discretion.
 
 ## What's Included?
 This Bazel monorepo includes several components:
-- A LaTeX template for the "Thesis Proposal" assessment item.
+- A LaTeX template for the "proposal" assessment item.
 - A LaTeX template for the final thesis document.
 - Bazel-based tooling for building both documents 
 - A hermetic (self-contained) Bazel toolchain for building and 
@@ -35,9 +36,9 @@ branch).
 ## Overleaf Compatible
 Bazel not your thing? Local builds a bit slow? You can write both 
 documents using Overleaf with no code changes. You can import the 
-project into Overleaf via their GitHub integration, then choosing 
-either `proposal/main.tex` or `thesis/main.tex` as the 
-"Main Document" in the settings menu.
+project into [Overleaf](https://www.overleaf.com/) via their GitHub 
+integration, then choosing either `proposal/main.tex` or 
+`thesis/main.tex` as the "Main Document" in the settings menu.
 
 ## Setup
 You can use as little or as much of the tooling as you please, but 
