@@ -10,6 +10,12 @@ lessons I've learnt in ~3 years of working in industry and applies them to an ac
 introduction to some interesting tooling for inquisitive students 
 approaching the end of their undergraduate studies.
 
+The 
+[semi-official template](http://itee.uq.edu.au/files/20609/itee-thesis-template_tex.txt)
+ is also a mess of barely relevant custom macros. 
+ Where possible I've drawn from marking / criteria sheets and official literature, but this is not an ITEE provided or sponsored
+ document, use at your own discretion.
+
 ## What's Included?
 This Bazel monorepo includes several components:
 - A LaTeX template for the "Thesis Proposal" assessment item.
