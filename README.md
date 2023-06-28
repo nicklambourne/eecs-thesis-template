@@ -200,4 +200,4 @@ maintainers who do the best they can with such a flawed language.
 [Bazel](https://bazel.build/).
 - The admin staff of ITEE (who didn't contribute to this project 
 directly, but do amazing work under trying conditions to make the 
-many, many ITEE thesis programs possible).
+many, many ITEE thesis programs possible). :heart:
