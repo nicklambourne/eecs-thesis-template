@@ -1,4 +1,4 @@
-# (Unofficial) UQ ITEE Undergraduate Thesis Template
+# (Unofficial) UQ EECS ~~ITEE~~ Undergraduate Thesis Template
 
 ## Why?
 
@@ -11,11 +11,11 @@ introduction to some interesting tooling for inquisitive students
 approaching the end of their undergraduate studies.
 
 The 
-[semi-official template](http://itee.uq.edu.au/files/20609/itee-thesis-template_tex.txt)
+[semi-official template](https://eecs.uq.edu.au/files/20609/itee-thesis-template_tex.txt)
  is also a mess of barely relevant custom macros. 
  Where possible I've drawn from marking / criteria sheets and 
  official literature to provide (limited) guidance as to what's 
- expected for each section, but this is not a UQ/ITEE-provided or sponsored document, use at your own discretion.
+ expected for each section, but this is not a UQ/EECS-provided or sponsored document, use at your own discretion.
 
 ## What's Included?
 This Bazel monorepo includes several components:
@@ -46,13 +46,13 @@ for MacOS and Debian-based Linux users the setup can be nearly
 entirely automated.
 
 ```bash
-git clone https://github.com/nicklambourne/itee-thesis-template.git
-cd itee-thesis-template
+git clone https://github.com/nicklambourne/eecs-thesis-template.git
+cd eecs-thesis-template
 # This attempts to install Nix and direnv if they're not already 
 # available (Nix via an install script, direnv via brew or apt)
 ./tools/setup/setup.sh
 cd ..  # We need to exit and renter the directory to trigger direnv
-cd itee-thesis-template
+cd eecs-thesis-template
 direnv allow # This will trigger the Nix environment (sadly not 
 # pure)
 bazel sync # This downloads the requisite Bazel tooling
@@ -206,6 +206,6 @@ they come up.
 maintainers who do the best they can with such a flawed language.
 - Google, for sharing the frustrating joy that is 
 [Bazel](https://bazel.build/).
-- The admin staff of ITEE (who didn't contribute to this project 
+- The admin staff of EECS ~~ITEE~~ (who didn't contribute to this project 
 directly, but do amazing work under trying conditions to make the 
-many, many ITEE thesis programs possible). :heart:
+many, many EECS ~~ITEE~~ thesis programs possible). :heart:
